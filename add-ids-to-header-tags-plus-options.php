@@ -97,7 +97,7 @@ add_filter( 'option_page_capability_addIDs_options', 'addIDs_option_page_capabil
 function addIDs_get_plugin_settings() {
     $saved = (array) get_option( 'addIDs_plugin_settings' );
     $defaults = array(
-        'link_text' => 'off',
+        'link_text' => '',
     );
 
     $defaults = apply_filters( 'addIDs_default_plugin_settings', $defaults );
