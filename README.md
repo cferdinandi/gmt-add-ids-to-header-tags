@@ -1,5 +1,5 @@
 # Add IDs to Header Tags Plus
-Adds an ID to each header tag in your WordPress posts. You can optionally also include a link with markup. It's forked from [Add IDs to Header Tags by George Stephanis](http://wordpress.org/plugins/add-ids-to-header-tags/).
+Add an `id` attribute to header tags in your WordPress posts. You can optionally also include a link with markup. It's forked from [Add IDs to Header Tags by George Stephanis](http://wordpress.org/plugins/add-ids-to-header-tags/).
 
 [Download Add IDs to Header Tags Plus](https://github.com/cferdinandi/add-ids-to-header-tags-plus/archive/master.zip)
 
