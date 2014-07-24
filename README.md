@@ -19,7 +19,7 @@ Getting started with Add IDs to Header Tags Plus is as simple as installing a pl
 1. Upload the `add-ids-to-header-tags-plus` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the Plugins menu in WordPress.
 
-And that's it, you're done. Nice work! You change what gets minified under "Settings" in the Admin Dashboard.
+And that's it, you're done. Nice work! You can set options under "Settings" in the Admin Dashboard.
 
 
 
