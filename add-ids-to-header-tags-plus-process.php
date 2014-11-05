@@ -4,7 +4,7 @@ require_once( dirname( __FILE__) . '/add-ids-to-header-tags-plus-options.php' );
 
 function add_ids_to_header_tags( $content ) {
 
-	if ( ! is_single() ) {
+	if ( ! is_singular() ) {
 		return $content;
 	}
 

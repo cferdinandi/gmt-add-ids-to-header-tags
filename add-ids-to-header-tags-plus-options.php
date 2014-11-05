@@ -132,5 +132,3 @@ function addIDs_get_link_text() {
     $options = addIDs_get_plugin_settings();
     return $options['link_text'];
 }
-
-?>
