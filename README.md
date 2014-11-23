@@ -37,6 +37,8 @@ HTML Minify is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+Add IDs to Header Tags Plus uses [semantic versioning](http://semver.org/).
+
 * v1.2.0 - November 5, 2014
 	* Extended support to pages, not just posts.
 * v1.1.0 - June 24, 2014
