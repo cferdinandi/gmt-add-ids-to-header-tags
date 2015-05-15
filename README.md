@@ -8,7 +8,6 @@ Add an `id` attribute to header tags in your WordPress posts. You can optionally
 1. [Getting Started](#getting-started)
 2. [How to Contribute](#how-to-contribute)
 3. [License](#license)
-4. [Changelog](#changelog)
 
 
 
@@ -32,14 +31,3 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 ## License
 
 HTML Minify is licensed under the [MIT License](http://gomakethings.com/mit/).
-
-
-
-## Changelog
-
-Add IDs to Header Tags Plus uses [semantic versioning](http://semver.org/).
-
-* v1.2.0 - November 5, 2014
-	* Extended support to pages, not just posts.
-* v1.1.0 - June 24, 2014
-	* Initial release.
