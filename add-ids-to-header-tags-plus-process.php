@@ -8,7 +8,11 @@
 			return $content;
 		}
 
-		$link_text = addIDs_get_link_text();
+		// Variables
+		global $post;
+		$options = addIDs_get_plugin_settings();
+		$post_type = get_post_type( $post );
+
 		$pattern = '#(?P<full_tag><(?P<tag_name>h\d)(?P<tag_extra>[^>]*)>(?P<tag_contents>[^<]*)</h\d>)#i';
 
 		if ( preg_match_all( $pattern, $content, $matches, PREG_SET_ORDER ) ) {
@@ -24,10 +28,10 @@
 				$id        = sanitize_title( $match['tag_contents'] );
 				$id_attr   = sprintf( ' id="%s"', $id );
 
-				if ( $link_text === '' ) {
+				if ( empty( $options['link_text'] ) || ( array_key_exists( $post_type, $options['post_types'] ) && $options['post_types'][$post_type] === 'on' ) ) {
 					$replace[] = sprintf( '<%1$s%2$s%3$s>%4$s</%1$s>', $match['tag_name'], $match['tag_extra'], $id_attr, $match['tag_contents'] );
 				} else {
-					$extra     = sprintf( ' <a href="#%s">' . $link_text . '</a>', $id );
+					$extra     = sprintf( ' <a href="#%s">' . $options['link_text'] . '</a>', $id );
 					$replace[] = sprintf( '<%1$s%2$s%3$s>%4$s%5$s</%1$s>', $match['tag_name'], $match['tag_extra'], $id_attr, $match['tag_contents'], $extra );
 				}
 

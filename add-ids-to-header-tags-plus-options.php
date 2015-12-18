@@ -12,6 +12,28 @@
 		<?php
 	}
 
+	function addIDs_settings_field_exclude_post_types() {
+		$options = addIDs_get_plugin_settings();
+		$post_types = get_post_types(array(
+			'public' => true,
+		));
+
+		?>
+			<p>These will not display the optional link text noted above.</p>
+		<?php
+
+		foreach ($post_types as $post_type) :
+		?>
+		<div>
+			<label for="exclude_post_types_<?php echo $post_type; ?>">
+				<input type="checkbox" name="addIDs_plugin_settings[post_types][<?php echo $post_type; ?>]" id="addIDs_post_types_<?php echo $post_type; ?>" <?php if ( array_key_exists($post_type, $options['post_types']) && $options['post_types'][$post_type] === 'on' ) { echo 'checked'; } ?> />
+				<?php echo $post_type; ?>
+			</label>
+		</div>
+		<?php
+		endforeach;
+	}
+
 
 
 
@@ -36,7 +58,8 @@
 			'addIDs_plugin_settings' // Menu slug, used to uniquely identify the page; see addIDs_plugin_settings_add_page()
 		);
 
-		add_settings_field( 'link_text', 'Link Test', 'addIDs_settings_field_link_text', 'addIDs_plugin_settings', 'general' );
+		add_settings_field( 'link_text', 'Link Text', 'addIDs_settings_field_link_text', 'addIDs_plugin_settings', 'general' );
+		add_settings_field( 'exclude_post_types', 'Exclude Post Types', 'addIDs_settings_field_exclude_post_types', 'addIDs_plugin_settings', 'general' );
 	}
 	add_action( 'admin_init', 'addIDs_plugin_settings_init' );
 
@@ -97,6 +120,7 @@
 	function addIDs_get_plugin_settings() {
 		$saved = (array) get_option( 'addIDs_plugin_settings' );
 		$defaults = array(
+			'post_types' => array(),
 			'link_text' => '',
 		);
 
@@ -116,6 +140,13 @@
 
 		if ( isset( $input['link_text'] ) && ! empty( $input['link_text'] ) )
 			$output['link_text'] = wp_filter_post_kses( $input['link_text'] );
+
+		if ( isset( $input['post_types'] ) ) {
+			foreach ($input['post_types'] as $post_type => $value) {
+				if ( isset( $input['post_types'][$post_type] ) )
+					$output['post_types'][$post_type] = 'on';
+			}
+		}
 
 		return apply_filters( 'addIDs_plugin_settings_validate', $output, $input );
 	}
