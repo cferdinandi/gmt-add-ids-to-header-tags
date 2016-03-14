@@ -3,12 +3,6 @@ Add an `id` attribute to header tags in your WordPress posts. You can optionally
 
 [Download Add IDs to Header Tags Plus](https://github.com/cferdinandi/add-ids-to-header-tags-plus/archive/master.zip)
 
-**In This Documentation**
-
-1. [Getting Started](#getting-started)
-2. [How to Contribute](#how-to-contribute)
-3. [License](#license)
-
 
 
 ## Getting Started
@@ -20,11 +14,13 @@ Getting started with Add IDs to Header Tags Plus is as simple as installing a pl
 
 And that's it, you're done. Nice work! You can set options under "Settings" in the Admin Dashboard.
 
+It's recommended that you also install the [GitHub Updater plugin](https://github.com/afragen/github-updater) to get automatic updates.
+
 
 
 ## How to Contribute
 
-In lieu of a formal style guide, take care to maintain the existing coding style. Please apply fixes to both the development and production code. Don't forget to update the version number, and when applicable, the documentation.
+Please read the [Contribution Guidelines](CONTRIBUTING.md).
 
 
 

@@ -1,8 +1,9 @@
 <?php
 
 	/**
-	 * Plugin Name: Add IDs to Header Tags
+	 * Plugin Name: GMT Add IDs to Header Tags Plug
 	 * Plugin URI: http://github.com/cferdinandi/add-ids-to-header-tags-plus
+	 * GitHub Plugin URI: http://github.com/cferdinandi/add-ids-to-header-tags-plus
 	 * Description: Add an `id` attribute to header tags in your posts. Adjust settings under <a href="options-general.php?page=addIDs_plugin_settings">Settings &rarr; Add IDs to Header Tags</a>
 	 * Author: Chris Ferdinandi
 	 * Author URI: http://gomakethings.com
