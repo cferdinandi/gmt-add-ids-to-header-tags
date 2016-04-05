@@ -31,7 +31,7 @@
 				if ( empty( $options['link_text'] ) || ( array_key_exists( $post_type, $options['post_types'] ) && $options['post_types'][$post_type] === 'on' ) ) {
 					$replace[] = sprintf( '<%1$s%2$s%3$s>%4$s</%1$s>', $match['tag_name'], $match['tag_extra'], $id_attr, $match['tag_contents'] );
 				} else {
-					$extra     = sprintf( ' <a href="#%s">' . $options['link_text'] . '</a>', $id );
+					$extra     = sprintf( ' <a href="#%s" tabindex="-1">' . $options['link_text'] . '</a>', $id );
 					$replace[] = sprintf( '<%1$s%2$s%3$s>%4$s%5$s</%1$s>', $match['tag_name'], $match['tag_extra'], $id_attr, $match['tag_contents'], $extra );
 				}
 
