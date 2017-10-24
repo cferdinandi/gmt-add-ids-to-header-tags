@@ -7,7 +7,7 @@
 	 * Description: Add an `id` attribute to header tags in your posts. Adjust settings under <a href="options-general.php?page=addIDs_plugin_settings">Settings &rarr; Add IDs to Header Tags</a>
 	 * Author: Chris Ferdinandi
 	 * Author URI: http://gomakethings.com
-	 * Version: 1.5.0
+	 * Version: 1.6.0
 	 * License: MIT
 	 *
 	 * A fork of the Add IDs to Header Tags plugin.
