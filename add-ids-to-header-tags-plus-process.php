@@ -13,7 +13,7 @@
 		$options = addIDs_get_plugin_settings();
 		$post_type = get_post_type( $post );
 
-		$content = str_replace('</code>', '{{/code}}', str_replace('<code>', '{{code}}', $content));
+		$content = str_replace('</code>', '{{{{{/}}}}}', str_replace('<code>', '{{{{{}}}}}', $content));
 		$pattern = '#(?P<full_tag><(?P<tag_name>h\d)(?P<tag_extra>[^>]*)>(?P<tag_contents>[^<]*)</h\d>)#i';
 
 		if ( preg_match_all( $pattern, $content, $matches, PREG_SET_ORDER ) ) {
@@ -40,7 +40,7 @@
 			$content = str_replace( $find, $replace, $content );
 		}
 
-		$content = str_replace('{{/code}}', '</code>', str_replace('{{code}}', '<code>', $content));
+		$content = str_replace('{{{{{/}}}}}', '</code>', str_replace('{{{{{}}}}}', '<code>', $content));
 		return $content;
 	}
 	add_filter( 'the_content', 'add_ids_to_header_tags' );
